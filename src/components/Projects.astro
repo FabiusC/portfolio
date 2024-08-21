@@ -1,0 +1,34 @@
+---
+const PROJECTS = [
+  {
+    title: "Tic Tac Toe",
+    description:
+      "Juego Tic Tac Toe, para 2 jugadores o contra la máquina. Implementa el algoritmo minimax para realizar los movimientos de la máquina, teniendo una probabilidad de que esta se equivoque en cada turno.",
+    link: "https://tictactoe-ai-minimax.netlify.app",
+    github: "https://github.com/FabiusC/tic-tac-toe-react.git",
+    image: "/src/assets/projects/TicTacToe.webp",
+    tags: ["HTML", "CSS", "JS"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
+    <article>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <a href={link}>Link</a>
+      <a href={github}>GitHub</a>
+      <img
+        class="rounded shadow-2xl shadow-indigo-950/90"
+        src={image}
+        alt={`Captura de pantaalla del proyecto ${title}`}
+      />
+    </article>
+  ))
+}

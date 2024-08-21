@@ -2,25 +2,32 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
 
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Porfolio de Fabio - Programador y Desarrollador Web - Frontend y Backend"
-  description="Contrata a Fabio para desarrollar tu aplicativo web">
-  <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+<Layout
+  title="Porfolio de Fabio - Programador y Desarrollador Web - Frontend y Backend"
+  description="Contrata a Fabio para desarrollar tu aplicativo web"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-22">
       <img
         class="rounded-full size-20"
-        src="../../src/assets/photo.jpeg"
+        src="../../src/assets/ProfilePicture.webp"
         alt="Logo PortFolio"
       />
       <h1
-        class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+        class="text-white text-3xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hola Soy Fabio!
+        ¡Hola, Soy Fabio!
         <a
           class="flex justify-center items-center"
           href="https://www.linkedin.com/in/fabiusc/"
@@ -30,7 +37,7 @@ import MailIcon from "../components/icons/Mail.astro";
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-2xl opacity-80 text-wrap max-w-[800px]">
         <span class="text-purple-200">Ingeniero de Sistemas.</span>
         <span>
           Desarrollador Web apasionado por la programación, ofrezco soluciones
@@ -39,21 +46,35 @@ import MailIcon from "../components/icons/Mail.astro";
         </span>
         <span class="text-yellow-100">Estoy ubicado Bogotá, Colombia.</span>
       </h2>
-      <nav class="flex gap-x-2 mt-5">
+      <nav class="flex flex-wrap gap-2 mt-5">
         <SocialPill href="https://www.linkedin.com/in/fabiusc/">
-          <LinkedInIcon class="size-6"/>
-            LinkedIn
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/FabiusC">
-          <GitHubIcon class="size-6"/>
-            GitHub
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
         </SocialPill>
-        <SocialPill href="https://github.com/FabiusC">
-          <MailIcon class="size-6"/>
-            fabioandrescar05@gmail.com
+        <SocialPill href="mailto:fabioandrescar05@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          fabioandrescar05@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h1 class="flex items-center text-4xl font-semibold mb-10 opacity-80 text-wrap py-4 gap-x-4">
+        <BriefcaseIcon class="size-8"/>
+        Experiencia Laboral
+      </h1>
+      <Experience/>
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h1 class="flex items-center text-4xl font-semibold mb-10 opacity-80 text-wrap py-4 gap-x-4">
+        <CodeIcon class="size-8"/>
+        Proyectos
+      </h1>
+      <Projects/>
+    </SectionContainer>
   </main>
 </Layout>
 

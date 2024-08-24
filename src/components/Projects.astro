@@ -1,34 +1,41 @@
 ---
-const PROJECTS = [
-  {
-    title: "Tic Tac Toe",
-    description:
-      "Juego Tic Tac Toe, para 2 jugadores o contra la máquina. Implementa el algoritmo minimax para realizar los movimientos de la máquina, teniendo una probabilidad de que esta se equivoque en cada turno.",
-    link: "https://tictactoe-ai-minimax.netlify.app",
-    github: "https://github.com/FabiusC/tic-tac-toe-react.git",
-    image: "/src/assets/projects/TicTacToe.webp",
-    tags: ["HTML", "CSS", "JS"],
-  },
-];
+import ButtonGradient from "./ButtonGradient.astro";
+import { PROJECTS } from "./consts/Constants.astro";
 ---
 
 {
   PROJECTS.map(({ title, description, tags, image, link, github }) => (
-    <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+    <article class="mt-10">
+      <h3 class="text-2xl font-semibold text-indigo-300 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex flex-row gap-x-2 mt-3 mb-3">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span
+              class={`
+                flex items-center gap-x-2 
+                bg-black/20
+                rounded-full text-sm 
+                border border-solid
+                ${tag.class}
+                py-1 px-2 
+                hover:scale-95 hover:bg-white/10 transition`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <a href={link}>Link</a>
-      <a href={github}>GitHub</a>
-      <img
-        class="rounded shadow-2xl shadow-indigo-950/90"
-        src={image}
-        alt={`Captura de pantaalla del proyecto ${title}`}
-      />
+      <img class={`${image.class}`} src={image.src} alt={image.alt} />
+      <ul class="flex flex-row gap-x-2 mt-5">
+        <li>
+          <ButtonGradient name="Ver proyecto..." link={link} />
+        </li>
+        <li>
+          <ButtonGradient name="Ver código..." link={github} />
+        </li>
+      </ul>
     </article>
   ))
 }

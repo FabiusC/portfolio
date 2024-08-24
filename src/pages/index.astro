@@ -1,16 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import SocialPill from "../components/SocialPill.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
+import About from "../components/About.astro";
+import Home from "../components/Home.astro";
 
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import IdIcon from "../assets/icons/Id.astro";
+import BriefcaseIcon from "../assets/iconsGUI/Briefcase.astro";
+import CodeIcon from "../assets/iconsGUI/Code.astro";
 ---
 
 <Layout
@@ -19,47 +17,7 @@ import Projects from "../components/Projects.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-22">
-      <img
-        class="rounded-full size-20"
-        src="../../src/assets/ProfilePicture.webp"
-        alt="Logo PortFolio"
-      />
-      <h1
-        class="text-white text-3xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        ¡Hola, Soy Fabio!
-        <a
-          class="flex justify-center items-center"
-          href="https://www.linkedin.com/in/fabiusc/"
-          target="_blank"
-          rel="noopener"
-        >
-          <Badge>Disponible para Trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-2xl opacity-80 text-wrap max-w-[800px]">
-        <span class="text-purple-200">Ingeniero de Sistemas.</span>
-        <span>
-          Desarrollador Web apasionado por la programación, ofrezco soluciones
-          de Diseño Arquitectural de Software así como Productos de Software a
-          la Medida.
-        </span>
-        <span class="text-yellow-100">Estoy ubicado Bogotá, Colombia.</span>
-      </h2>
-      <nav class="flex flex-wrap gap-2 mt-5">
-        <SocialPill href="https://www.linkedin.com/in/fabiusc/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/FabiusC">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:fabioandrescar05@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          fabioandrescar05@gmail.com
-        </SocialPill>
-      </nav>
+      <Home/>
     </SectionContainer>
     <SectionContainer id="experience">
       <h1 class="flex items-center text-4xl font-semibold mb-10 opacity-80 text-wrap py-4 gap-x-4">
@@ -69,11 +27,18 @@ import Projects from "../components/Projects.astro";
       <Experience/>
     </SectionContainer>
     <SectionContainer id="projects">
-      <h1 class="flex items-center text-4xl font-semibold mb-10 opacity-80 text-wrap py-4 gap-x-4">
+      <h1 class="flex items-center text-4xl font-semibold mb-10 mt-24 opacity-80 text-wrap py-4 gap-x-4">
         <CodeIcon class="size-8"/>
         Proyectos
       </h1>
       <Projects/>
+    </SectionContainer>
+    <SectionContainer id="about">
+      <h1 class="flex items-center text-4xl font-semibold mb-10 mt-24 opacity-80 text-wrap py-4 gap-x-4">
+        <IdIcon class="size-8"/>
+        Sobre mí
+      </h1>
+      <About/>
     </SectionContainer>
   </main>
 </Layout>

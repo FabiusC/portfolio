@@ -1,0 +1,142 @@
+---
+import HTMLIcon from "../icons/HTML.astro";
+import CSSIcon from "../icons/CSS.astro";
+import TailWindIcon from "../icons/TailWind.astro";
+import JSIcon from "../icons/Javascript.astro";
+import TSIcon from "../icons/Typescript.astro";
+import ViteIcon from "../icons/Vite.astro";
+import ReactIcon from "../icons/React.astro";
+import AngularIcon from "../icons/Angular.astro";
+export const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-white/5 text-[#e34c26]/75 border-[#e34c26]/40",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-white/5 text-[#264de4]/75 border-[#264de4]/40",
+    icon: CSSIcon,
+  },
+  TailWind: {
+    name: "TailWind",
+    class: "bg-white/5 text-[#38b2ac]/75 border-[#38b2ac]/40",
+    icon: TailWindIcon,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-white/5 text-[#f7df1e]/75 border-[#f7df1e]/40",
+    icon: JSIcon,
+  },
+  TS: {
+    name: "TypeScript",
+    class: "bg-white/5 text-[#3178c6]/75 border-[#3178c6]/40",
+    icon: TSIcon,
+  },
+  Vite: {
+    name: "Vite",
+    class: "bg-white/5 text-[#9575CD]/75 border-[#9575CD]/40",
+    icon: ViteIcon,
+  },
+  React: {
+    name: "React",
+    class: "bg-white/5 text-[#61dafb]/75 border-[#61dafb]/40",
+    icon: ReactIcon,
+  },
+  Angular: {
+    name: "Angular",
+    class: "bg-white/5 text-[#dd0031]/75 border-[#dd0031]/40",
+    icon: AngularIcon,
+  },
+  
+};
+
+export const IMAGES = {
+  TicTacToe: {
+    src: "/src/assets/images/projects/TicTacToe.webp",
+    alt: "Captura de pantalla del proyecto Tic Tac Toe",
+    class: "rounded shadow-xl shadow-[#CB3459]/10",
+  },
+  ECommerce: {
+    src: "/src/assets/images/projects/ECommerce.webp",
+    alt: "Captura de pantalla del proyecto ECommerce",
+    class: "rounded shadow-xl shadow-[#DBAE29]/10",
+  },
+  ReadingList: {
+    src: "/src/assets/images/projects/ReadingList.webp",
+    alt: "Captura de pantalla del proyecto Reading List",
+    class: "rounded shadow-xl shadow-[#DB3E21]/10",
+  },
+  EnrutamientoPaquetes: {
+    src: "/src/assets/images/projects/EnrutamientoPaquetes.webp",
+    alt: "Captura de pantalla del proyecto Enrutamiento de Paquetes",
+    class: "rounded shadow-xl shadow-[#2BCADB]/10",
+  },
+  SistemaHabitabilidad: {
+    src: "/src/assets/images/projects/SistemaHabitabilidad.webp",
+    alt: "Captura de pantalla del proyecto Sistema de Habitabilidad",
+    class: "rounded shadow-xl shadow-[#FF4A71]/10",
+  },
+};
+
+export const PROJECTS = [
+  {
+    title: "Tic Tac Toe",
+    description: `Juego Tic Tac Toe, para 2 jugadores o contra la máquina. Implementa el algoritmo 
+      minimax para realizar los movimientos de la máquina, teniendo una probabilidad de que 
+      esta se equivoque en cada turno.`,
+    link: "https://tictactoe-ai-minimax.netlify.app",
+    github: "https://github.com/FabiusC/tic-tac-toe-react.git",
+    image: IMAGES.TicTacToe,
+    tags: [TAGS.React, TAGS.Vite, TAGS.JS, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "E-Commerce",
+    description: `Un ECommerce a partir del consumo de la API fakestoreapi, que permite agregar 
+      productos al carrito, sumar productos de un solo tipo y restarlos, o eliminar todos los 
+      productos del carrito o de un solo tipo de producto, mostrando el precio total de la compra.`,
+    link: "https://ecommerce-fakestoreapi-angular.netlify.app",
+    github: "https://github.com/FabiusC/ECommerce-Frontend.git",
+    image: IMAGES.ECommerce,
+    tags: [TAGS.Angular, TAGS.TS, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Reading List",
+    description: `Muestra una lista de libros a partir de un archivo de datos json. Que permite guardar 
+      libros en la lista de lectura a partir de arrastrar el libro o pulsando un botón. 
+      Esta lista se almacena en el local storage. Sincronización del total de libros en la lista 
+      de lectura y la lista de libros.`,
+    link: "https://reading-list-react.netlify.app",
+    github: "https://github.com/FabiusC/Reading-List.git",
+    image: IMAGES.ReadingList,
+    tags: [TAGS.Angular, TAGS.TS, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Enrutamiento de Paquetes",
+    description: `Un sistema de enrutamiento de paquetes a través de un grafo, donde cada nodo representa un modem, 
+      antena, repetidor o servidor. El sistema simula el transito de paquetes por una red, 
+      mostrando modificaciones en la red como la caída de enlaces o nodos, donde los paquetes 
+      deben buscar una nueva ruta o puedan incluso perderse. El algoritmo utilizado fue Dijkstra 
+      en función del tipo de enlace que haya entre nodos para calcular la ruta al destino, estos enlaces 
+      son de tres tipos, fibra óptica, coaxial y cobre. El usuario tiene la posibilidad de pintar 
+      un grafo indicando el material del cable o el tipo de nodo que quiere dibujar.`,
+    link: "https://662fbe5d0f5c5c3d0fc3f07d--adorable-bombolone-0fc98d.netlify.app",
+    github: "https://github.com/erickturriago/sistema-enrutamiento.git",
+    image: IMAGES.EnrutamientoPaquetes,
+    tags: [TAGS.React, TAGS.Vite, TAGS.JS, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Sistema de Habitabilidad",
+    description: `Este sistema implementa un algoritmo de reubicación de personas a partir 
+    de su nivel de peligrosidad dado por antecedentes, esta reubicación busca que se minimice 
+    la posibilidad de conflictos entre los habitantes, mostrando un caso inicial con los habitantes 
+    repartidos aleatoriamente y luego ordenados. Este algoritmo podría ser aplicado a prisiones. 
+    Implementa propagación de riesgos mediante adyacencias en un grafo. Se utilizó coloreado 
+    de grafos a partir de su nivel de peligro utilizando la biblioteca 3D Three.js.`,
+    link: "https://664eec8f48fb0fb9d669fa60--celadon-kheer-10de31.netlify.app",
+    github: "https://github.com/erickturriago/sistema_habitabilidad.git",
+    image: IMAGES.SistemaHabitabilidad,
+    tags: [TAGS.React, TAGS.Vite, TAGS.JS, TAGS.HTML, TAGS.CSS],
+  },
+];
+---

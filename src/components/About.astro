@@ -1,28 +1,26 @@
 ---
-import Badge from './Badge.astro'
-
-
+import Skills from "./Skills.astro";
 ---
-{
-    <h1 class="
-        text-white text-3xl lg:text-5xl font-bold 
-        flex justify-center flex-row 
-        gap-x-4 pb-6 lg:pb-10">
-        Fabio Andres Hurtado
-        <a
-          class="flex justify-center items-center"
-          href="https://www.linkedin.com/in/fabiusc/"
-          target="_blank"
-          rel="noopener"
-        >
-          <Badge>Disponible para Trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-2xl opacity-80 text-wrap max-w-[800px]">
-        <span class="text-purple-200">Ingeniero de Sistemas.</span>
-        <span>
-          Soy estudiante en la <span class="text-indigo-200">Univesidad Distrital Francisco Jose de Caldas</span>, 
-          apasionado por participar en proyectos que puedan mejorar mis habilidades personales y profesionales.
-        </span>
-      </h2>
-}
+
+<article>
+  <h1
+    class="text-white text-3xl lg:text-5xl font-bold
+    flex justify-center flex-row
+    gap-x-4 pb-6 lg:pb-10"
+  >
+    Fabio Andres Hurtado
+  </h1>
+  <h2 class="text-2xl opacity-80 text-wrap max-w-[800px]">
+    <span class="text-purple-200">Ingeniero de Sistemas.</span>
+    <span>
+      Soy estudiante en la{" "}
+      <span class="text-indigo-200">
+        Univesidad Distrital Francisco Jose de Caldas
+      </span>
+      , apasionado por participar en proyectos que puedan mejorar mis habilidades
+      personales y profesionales.
+    </span>
+  </h2>
+  <Skills/>
+</article>
+
